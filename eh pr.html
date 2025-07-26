@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Message Example</title>
+</head>
+<body>
+    <h1>Error Message Example</h1>
+    <p>Type your name below:</p>
+    <input id="name" placeholder="Your name">
+    <button onclick="checkName()">Submit</button>
+    <p id="error"></p>
+
+    <script>
+        function checkName() {
+            let name = document.getElementById("name").value;
+
+            if (name.trim() === "") {
+                document.getElementById("error").innerText = "Error: Name cannot be empty!";
+            } else {
+                document.getElementById("error").innerText = "Error occurred wait: " + name;
+            }
+        }
+    </script>
+</body>
+</html>
